@@ -646,3 +646,306 @@ body {
         font-size: 32px;
     }
 }
+
+/* =========================================================
+   PÁGINA DE PUBLICACIONES
+   ========================================================= */
+
+.publications-hero {
+    padding: 70px 0 55px;
+    background: #f5f7fa;
+    border-bottom: 1px solid #e1e5ea;
+}
+
+.publications-hero .container,
+.publications-section .container,
+.publications-archive .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.section-kicker {
+    margin: 0 0 14px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #b08a3c;
+}
+
+.publications-hero h1 {
+    margin: 0;
+    color: #173b6c;
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1.1;
+}
+
+.publications-intro {
+    max-width: 760px;
+    margin: 24px 0 0;
+    color: #4f5b68;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.publications-section {
+    padding: 70px 0;
+}
+
+.publications-section + .publications-section {
+    padding-top: 20px;
+}
+
+.publications-section h2,
+.publications-archive h2 {
+    margin: 0 0 45px;
+    color: #173b6c;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   AÑOS
+   ========================================================= */
+
+.publication-year {
+    margin-bottom: 55px;
+}
+
+.publication-year > h3 {
+    margin: 0 0 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #b08a3c;
+    color: #173b6c;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PUBLICACIONES INDIVIDUALES
+   ========================================================= */
+
+.publication-item {
+    margin-bottom: 28px;
+    padding: 30px 34px;
+    background: #ffffff;
+    border: 1px solid #e1e5ea;
+    border-left: 4px solid #173b6c;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.publication-item h4 {
+    margin: 0 0 15px;
+    color: #173b6c;
+    font-size: 21px;
+    line-height: 1.45;
+}
+
+.publication-authors {
+    margin: 0 0 10px;
+    color: #263544;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.publication-details {
+    margin: 0 0 12px;
+    color: #4f5b68;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.publication-english {
+    margin: 15px 0 18px;
+    padding-left: 16px;
+    border-left: 2px solid #d8dde3;
+    color: #68737e;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.publication-note {
+    margin: 10px 0 18px;
+    color: #68737e;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.publication-isbn {
+    margin: 10px 0 18px;
+    color: #4f5b68;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   TIPO DE PUBLICACIÓN
+   ========================================================= */
+
+.publication-type {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 5px 10px;
+    background: #f0f3f6;
+    color: #6d7782;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   PUBLICACIONES PRÓXIMAS
+   ========================================================= */
+
+.publication-item.forthcoming {
+    border-left-color: #b08a3c;
+    background: #fcfbf7;
+}
+
+
+/* =========================================================
+   ENLACES
+   ========================================================= */
+
+.publication-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.publication-links a,
+.publication-links .link-disabled {
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid #173b6c;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.publication-links a {
+    color: #173b6c;
+    background: #ffffff;
+}
+
+.publication-links a:hover {
+    color: #ffffff;
+    background: #173b6c;
+}
+
+.publication-links .link-disabled {
+    color: #a2aab2;
+    border-color: #d8dde3;
+    background: #f7f8f9;
+    cursor: default;
+}
+
+
+/* =========================================================
+   LIBROS
+   ========================================================= */
+
+.book-item {
+    border-left-color: #b08a3c;
+}
+
+.publications-alt {
+    background: #f5f7fa;
+}
+
+
+/* =========================================================
+   ARCHIVO HISTÓRICO
+   ========================================================= */
+
+.publications-archive {
+    padding: 60px 0;
+    background: #173b6c;
+    color: #ffffff;
+}
+
+.publications-archive h2 {
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.publications-archive p {
+    max-width: 760px;
+    margin: 0;
+    color: #dce5ef;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   AÑO SIN PUBLICACIONES
+   ========================================================= */
+
+.year-note {
+    margin: 0;
+    padding: 20px 24px;
+    background: #f5f7fa;
+    border-left: 3px solid #c7cdd4;
+    color: #68737e;
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .publications-hero {
+        padding: 50px 0 40px;
+    }
+
+    .publications-hero .container,
+    .publications-section .container,
+    .publications-archive .container {
+        padding: 0 22px;
+    }
+
+    .publications-section {
+        padding: 50px 0;
+    }
+
+    .publications-section h2,
+    .publications-archive h2 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .publication-item {
+        padding: 24px 22px;
+    }
+
+    .publication-item h4 {
+        font-size: 19px;
+    }
+
+    .publication-links {
+        gap: 8px;
+    }
+
+    .publication-links a,
+    .publication-links .link-disabled {
+        padding: 6px 11px;
+    }
+
+}
