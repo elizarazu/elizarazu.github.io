@@ -43,9 +43,9 @@ body {
     max-width: 1250px;
     margin: 0 auto;
 
-    min-height: 92px;
+    min-height: 78px;
 
-    padding: 16px 30px;
+    padding: 14px 30px;
 
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@ body {
     text-decoration: none;
 
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     line-height: 1.15;
 }
@@ -164,7 +164,7 @@ body {
 
 
 /* ---------------------------------------------------------
-   HERO
+   PRESENTACIÓN PRINCIPAL
    --------------------------------------------------------- */
 
 .hero {
@@ -185,16 +185,16 @@ body {
     max-width: 1250px;
     margin: 0 auto;
 
-    min-height: 560px;
+    min-height: 510px;
 
-    padding: 65px 30px;
+    padding: 60px 30px;
 
     display: grid;
-    grid-template-columns: 1fr 400px;
+    grid-template-columns: 1fr 350px;
 
     align-items: center;
 
-    gap: 70px;
+    gap: 65px;
 }
 
 
@@ -208,7 +208,7 @@ body {
     color: #102f55;
 
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(52px, 6vw, 76px);
+    font-size: clamp(48px, 5.5vw, 70px);
 
     line-height: 1.05;
 }
@@ -256,7 +256,7 @@ body {
 
 
 /* ---------------------------------------------------------
-   ETIQUETAS DE INVESTIGACIÓN
+   LÍNEAS DE INVESTIGACIÓN
    --------------------------------------------------------- */
 
 .research-tags {
@@ -286,7 +286,8 @@ body {
 
 .photo-placeholder {
     width: 100%;
-    aspect-ratio: 4 / 5;
+
+    aspect-ratio: 3 / 4;
 
     display: flex;
     align-items: center;
