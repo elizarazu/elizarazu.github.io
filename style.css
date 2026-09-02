@@ -1,0 +1,647 @@
+/* =========================================================
+   PÁGINA ACADÉMICA — EDDY LIZARAZU
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONFIGURACIÓN GENERAL
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;
+    color: #263238;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ---------------------------------------------------------
+   ENCABEZADO
+   --------------------------------------------------------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.header-inner {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    min-height: 92px;
+
+    padding: 16px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* ---------------------------------------------------------
+   IDENTIDAD
+   --------------------------------------------------------- */
+
+.identity {
+    min-width: 270px;
+}
+
+.site-name {
+    display: block;
+
+    color: #12345b;
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.15;
+}
+
+.site-title {
+    margin-top: 5px;
+
+    color: #59636e;
+    font-size: 15px;
+}
+
+
+/* ---------------------------------------------------------
+   NAVEGACIÓN
+   --------------------------------------------------------- */
+
+.main-nav {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 27px;
+}
+
+.main-nav a {
+    position: relative;
+
+    padding: 8px 0;
+
+    color: #233b5d;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #1769c2;
+}
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #173d70;
+
+    transition: width 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   SELECTOR DE IDIOMA
+   --------------------------------------------------------- */
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    white-space: nowrap;
+
+    font-size: 14px;
+}
+
+.language-selector a {
+    color: #9aa1a8;
+    text-decoration: none;
+}
+
+.language-selector a.selected {
+    color: #1769c2;
+    font-weight: bold;
+}
+
+.language-selector span {
+    color: #d1d5db;
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.hero {
+    position: relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f6f9fc 0%,
+            #ffffff 58%,
+            #ffffff 100%
+        );
+
+    border-bottom: 1px solid #edf0f3;
+}
+
+.hero-content {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    min-height: 560px;
+
+    padding: 65px 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 400px;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+/* ---------------------------------------------------------
+   TEXTO PRINCIPAL
+   --------------------------------------------------------- */
+
+.hero-text h1 {
+    margin: 0;
+
+    color: #102f55;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(52px, 6vw, 76px);
+
+    line-height: 1.05;
+}
+
+.hero-text h2 {
+    margin: 18px 0 0;
+
+    color: #1c5ca8;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.gold-line {
+    width: 72px;
+    height: 3px;
+
+    margin: 25px 0;
+
+    background: #c49a45;
+}
+
+.affiliation {
+    margin: 0 0 25px;
+
+    color: #4c5965;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+
+    line-height: 1.55;
+}
+
+.introduction {
+    max-width: 690px;
+
+    margin: 0 0 28px;
+
+    color: #36414c;
+
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+
+/* ---------------------------------------------------------
+   ETIQUETAS DE INVESTIGACIÓN
+   --------------------------------------------------------- */
+
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.research-tags span {
+    padding: 9px 17px;
+
+    background: #f4f0e7;
+
+    border: 1px solid #ebe2d0;
+    border-radius: 30px;
+
+    color: #23466f;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   FOTOGRAFÍA PROVISIONAL
+   --------------------------------------------------------- */
+
+.photo-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e9edf2,
+            #f7f8fa
+        );
+
+    border: 1px solid #dfe4e9;
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 40px rgba(30, 50, 70, 0.12);
+}
+
+.photo-inner {
+    width: 78%;
+    height: 78%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 2px dashed #b9c2cc;
+    border-radius: 12px;
+
+    color: #7a858f;
+
+    text-align: center;
+}
+
+.photo-inner span {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+}
+
+.photo-inner small {
+    margin-top: 7px;
+
+    font-size: 13px;
+}
+
+
+/* ---------------------------------------------------------
+   TARJETAS PRINCIPALES
+   --------------------------------------------------------- */
+
+.quick-links {
+    max-width: 1250px;
+
+    margin: 35px auto 0;
+
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    border: 1px solid #e4e8ec;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(20, 40, 60, 0.06);
+}
+
+.quick-card {
+    min-height: 285px;
+
+    padding: 35px 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    color: #263238;
+    text-decoration: none;
+
+    border-right: 1px solid #e5e8eb;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.quick-card:last-child {
+    border-right: none;
+}
+
+.quick-card:hover {
+    background: #fafcfe;
+    transform: translateY(-3px);
+}
+
+.icon {
+    height: 54px;
+
+    margin-bottom: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1769c2;
+
+    font-size: 38px;
+}
+
+.quick-card h3 {
+    margin: 0 0 12px;
+
+    color: #17385f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+}
+
+.quick-card p {
+    margin: 0;
+
+    color: #59636e;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.card-link {
+    margin-top: auto;
+    padding-top: 20px;
+
+    color: #1769c2;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   SECCIONES DE CONTENIDO
+   --------------------------------------------------------- */
+
+.content-section {
+    max-width: 950px;
+
+    margin: 100px auto;
+
+    padding: 0 30px;
+
+    scroll-margin-top: 110px;
+}
+
+.content-section h2 {
+    margin: 0 0 25px;
+
+    color: #12345b;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+}
+
+.content-section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin-top: 14px;
+
+    background: #c49a45;
+}
+
+.content-section p {
+    color: #4b5661;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   PIE DE PÁGINA
+   --------------------------------------------------------- */
+
+.site-footer {
+    margin-top: 100px;
+
+    padding: 35px 20px;
+
+    background: #102f55;
+
+    color: #dbe5ef;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 1050px) {
+
+    .header-inner {
+        gap: 20px;
+    }
+
+    .identity {
+        min-width: 210px;
+    }
+
+    .site-name {
+        font-size: 25px;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 320px;
+        gap: 45px;
+    }
+
+    .quick-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quick-card:nth-child(3) {
+        border-right: none;
+    }
+
+    .quick-card:nth-child(-n+3) {
+        border-bottom: 1px solid #e5e8eb;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE — TELÉFONO
+   --------------------------------------------------------- */
+
+@media (max-width: 760px) {
+
+    .site-header {
+        position: relative;
+    }
+
+    .header-inner {
+        padding: 18px 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+    }
+
+    .identity {
+        min-width: auto;
+    }
+
+    .site-name {
+        font-size: 25px;
+    }
+
+    .main-nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        padding-top: 10px;
+
+        gap: 22px;
+    }
+
+    .language-selector {
+        margin-left: auto;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        padding: 50px 25px;
+
+        gap: 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .hero-text h2 {
+        font-size: 26px;
+    }
+
+    .affiliation {
+        font-size: 19px;
+    }
+
+    .photo-placeholder {
+        max-width: 330px;
+
+        margin: 0 auto;
+    }
+
+    .quick-links {
+        grid-template-columns: 1fr;
+
+        margin: 25px 20px 0;
+
+        padding: 0;
+    }
+
+    .quick-card {
+        min-height: auto;
+
+        padding: 30px 25px;
+
+        border-right: none;
+        border-bottom: 1px solid #e5e8eb;
+    }
+
+    .quick-card:last-child {
+        border-bottom: none;
+    }
+
+    .content-section {
+        margin: 70px auto;
+
+        padding: 0 25px;
+    }
+
+    .content-section h2 {
+        font-size: 32px;
+    }
+}
