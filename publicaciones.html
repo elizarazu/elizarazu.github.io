@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicaciones | Eddy Lizarazu</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Corrección del encabezado: fondo opaco y contenido siempre por detrás */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff !important;
+            opacity: 1 !important;
+        }
+
+        .site-header .header-inner {
+            background: #ffffff !important;
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -34,7 +53,7 @@
                 Inicio
             </a>
 
-            <a href="index.html#investigacion">
+            <a href="investigacion.html">
                 Investigación
             </a>
 
