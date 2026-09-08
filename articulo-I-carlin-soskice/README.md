@@ -1,32 +1,38 @@
 # Artículo I — Código y reproducibilidad
 
-**El modelo de tres ecuaciones de Carlin–Soskice: dinámica, estabilidad y adaptación de la política monetaria**
+## El modelo de tres ecuaciones de Carlin–Soskice: dinámica, estabilidad y adaptación de la política monetaria
 
-Este directorio contiene el código Python utilizado para reproducir las simulaciones, figuras y resultados numéricos del Artículo I.
+Este directorio contiene los códigos, resultados numéricos y figuras utilizados para reproducir los ejercicios computacionales del Artículo I.
 
-## Estructura
+El artículo estudia una extensión dinámica del modelo de tres ecuaciones de Carlin–Soskice mediante la introducción de persistencia autorregresiva en la brecha del producto. El análisis se centra en las propiedades de estabilidad, la naturaleza de los valores propios y los efectos de distintos grados de adaptación de la política monetaria.
 
-- `python/`: código del modelo y scripts de las Figuras 1–4.
-- `figuras/`: figuras generadas en PDF y PNG.
-- `resultados/`: resultados numéricos y trayectorias de las IRF.
-- `requirements.txt`: dependencias mínimas de Python.
+---
 
-## Ejecución
+## Estructura del repositorio
 
-Desde la carpeta `python/`:
-
-```bash
-python generar_figuras.py
-```
-
-Las figuras se guardan en `figuras/` y los resultados numéricos en `resultados/`.
-
-## Parámetros principales
-
-La simulación usa `alpha = 0.8`, `gamma = 0.8` y `kappa = 0.5`, con la parametrización del artículo y los tres regímenes A, B y C.
-
-## Shock
-
-Las IRF utilizan un shock unitario de demanda `d_0 = 1`, con `d_t = 0` para `t >= 1`, partiendo del equilibrio.
-
-El repositorio está preparado para complementar la versión LaTeX del artículo y facilitar la reproducibilidad de las figuras y resultados reportados.
+```text
+articulo-I-carlin-soskice/
+│
+├── README.md
+├── requirements.txt
+│
+├── python/
+│   ├── modelo_cs.py
+│   ├── figura_1_estabilidad.py
+│   ├── figura_2_radio_espectral.py
+│   ├── figuras_3_4_irf.py
+│   └── generar_figuras.py
+│
+├── figuras/
+│   ├── figura_1_estabilidad.pdf
+│   ├── figura_1_estabilidad.png
+│   ├── figura_2_radio_espectral.pdf
+│   ├── figura_2_radio_espectral.png
+│   ├── figura_3_irf_producto.pdf
+│   ├── figura_3_irf_producto.png
+│   ├── figura_4_irf_inflacion.pdf
+│   └── figura_4_irf_inflacion.png
+│
+└── resultados/
+    ├── regimenes_dinamicos.csv
+    └── irf_demanda_tres_regimenes.csv
