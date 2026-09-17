@@ -43,6 +43,6 @@ axes[1].set_xlim(0, PERIODS)
 
 fig.tight_layout()
 fig.savefig(ROOT / "figuras" / "figura_5_caso_D_inestabilidad.pdf", bbox_inches="tight")
-fig.savefig(ROOT / "figuras" / "figura_5_caso_D_inestabilidad.png", dpi=300, bbox_inches="tight")
+fig.savefig(ROOT / "figuras" / "figura_5_caso_D_inestabilidad.svg", bbox_inches="tight")
 plt.close(fig)
 print(f"Figura 5 generada. rho(A)={rho:.4f}")
