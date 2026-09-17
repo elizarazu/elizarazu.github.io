@@ -25,16 +25,18 @@ articulo-I-carlin-soskice/
 │   └── generar_figuras.py
 │
 ├── figuras/
-│   ├── figura_1_estabilidad.pdf/.png
-│   ├── figura_2_radio_espectral.pdf/.png
-│   ├── figura_3_irf_producto.pdf/.png
-│   ├── figura_4_irf_inflacion.pdf/.png
-│   └── figura_5_caso_D_inestabilidad.pdf/.png
+│   ├── figura_1_estabilidad.pdf/.svg
+│   ├── figura_2_radio_espectral.pdf/.svg
+│   ├── figura_3_irf_producto.pdf/.svg
+│   ├── figura_4_irf_inflacion.pdf/.svg
+│   └── figura_5_caso_D_inestabilidad.pdf/.svg
 │
 └── resultados/
     ├── regimenes_dinamicos.csv
     └── irf_demanda_tres_regimenes.csv
 ```
+
+Las figuras se distribuyen en formatos vectoriales **PDF y SVG**. El PDF es el formato utilizado por el manuscrito LaTeX; el SVG facilita la visualización y reutilización de las figuras fuera de LaTeX.
 
 ## Ejecución
 
