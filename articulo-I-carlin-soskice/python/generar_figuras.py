@@ -1,4 +1,4 @@
-"""Script maestro: genera las Figuras 1--4 y los resultados numéricos."""
+"""Script maestro: genera las Figuras 1--5 y los resultados numéricos."""
 
 import subprocess
 import sys
@@ -9,9 +9,10 @@ scripts = [
     "figura_1_estabilidad.py",
     "figura_2_radio_espectral.py",
     "figuras_3_4_irf.py",
+    "figura_5_caso_D_inestabilidad.py",
 ]
 
 for script in scripts:
     subprocess.run([sys.executable, str(HERE / script)], check=True)
 
-print("Figuras 1--4 y resultados numéricos generados correctamente.")
+print("Figuras 1--5 y resultados numéricos generados correctamente.")
