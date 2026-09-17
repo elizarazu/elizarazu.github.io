@@ -52,5 +52,5 @@ for variable, ylabel, title, filename in [
     ax.set_xlim(0, PERIODS); ax.grid(True, alpha=0.25); ax.legend(loc="upper right")
     fig.tight_layout()
     fig.savefig(ROOT / "figuras" / f"{filename}.pdf", bbox_inches="tight")
-    fig.savefig(ROOT / "figuras" / f"{filename}.png", dpi=300, bbox_inches="tight")
+    fig.savefig(ROOT / "figuras" / f"{filename}.svg", bbox_inches="tight")
     plt.close(fig)
