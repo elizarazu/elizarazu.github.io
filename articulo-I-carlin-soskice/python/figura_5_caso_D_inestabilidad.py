@@ -28,19 +28,19 @@ axes[0].set_title(
 axes[0].grid(True, color="0.80", linewidth=0.6, alpha=0.8)
 axes[0].set_xlim(0, PERIODS)
 
-# Inserto compacto, ligeramente desplazado para no interferir con el eje principal.
+# Inserto inferior: muestra el corto plazo sin cubrir la trayectoria principal.
 axins1 = inset_axes(
-    axes[0], width="29%", height="38%", loc="upper left",
-    bbox_to_anchor=(0.045, -0.015, 1, 1),
+    axes[0], width="27%", height="31%", loc="lower left",
+    bbox_to_anchor=(0.045, 0.065, 1, 1),
     bbox_transform=axes[0].transAxes, borderpad=0.8,
 )
 axins1.plot(t[:ZOOM_PERIODS + 1], z[:ZOOM_PERIODS + 1, 0],
-            color="black", linewidth=1.1)
+            color="black", linewidth=1.05)
 axins1.axhline(0, color="black", linewidth=0.5)
 axins1.grid(True, color="0.85", linewidth=0.45, alpha=0.8)
 axins1.set_xlim(0, ZOOM_PERIODS)
-axins1.set_title("Primeros 15 períodos", fontsize=7.5, pad=2)
-axins1.tick_params(labelsize=6.5, pad=1)
+axins1.set_title("Primeros 15 períodos", fontsize=7.2, pad=2)
+axins1.tick_params(labelsize=6.2, pad=1)
 
 axes[1].plot(t, z[:, 1], color="black", linewidth=1.8)
 axes[1].axhline(0, color="black", linewidth=0.8)
@@ -50,17 +50,17 @@ axes[1].grid(True, color="0.80", linewidth=0.6, alpha=0.8)
 axes[1].set_xlim(0, PERIODS)
 
 axins2 = inset_axes(
-    axes[1], width="29%", height="38%", loc="upper left",
-    bbox_to_anchor=(0.045, -0.015, 1, 1),
+    axes[1], width="27%", height="31%", loc="lower left",
+    bbox_to_anchor=(0.045, 0.065, 1, 1),
     bbox_transform=axes[1].transAxes, borderpad=0.8,
 )
 axins2.plot(t[:ZOOM_PERIODS + 1], z[:ZOOM_PERIODS + 1, 1],
-            color="black", linewidth=1.1)
+            color="black", linewidth=1.05)
 axins2.axhline(0, color="black", linewidth=0.5)
 axins2.grid(True, color="0.85", linewidth=0.45, alpha=0.8)
 axins2.set_xlim(0, ZOOM_PERIODS)
-axins2.set_title("Primeros 15 períodos", fontsize=7.5, pad=2)
-axins2.tick_params(labelsize=6.5, pad=1)
+axins2.set_title("Primeros 15 períodos", fontsize=7.2, pad=2)
+axins2.tick_params(labelsize=6.2, pad=1)
 
 fig.tight_layout()
 
