@@ -61,11 +61,9 @@ irf.to_csv(
 
 line_styles = {"A": "-", "B": "--", "C": ":"}
 
-for variable, ylabel, title, filename in [
-    ("x", r"Brecha del producto, $x_t$",
-     r"IRF ante un shock de demanda $d_0=1$", "figura_3_irf_producto"),
+for variable, ylabel, filename in [
+    ("x", r"Brecha del producto, $x_t$", "figura_3_irf_producto"),
     ("pi", r"Desviación de inflación, $\widetilde{\pi}_t$",
-     r"IRF de la inflación ante un shock de demanda $d_0=1$",
      "figura_4_irf_inflacion"),
 ]:
     fig, ax = plt.subplots(figsize=(8.6, 5.0))
@@ -84,7 +82,6 @@ for variable, ylabel, title, filename in [
     ax.axhline(0, color="black", linewidth=0.8)
     ax.set_xlabel(r"Período, $t$")
     ax.set_ylabel(ylabel)
-    ax.set_title(title)
     ax.set_xlim(0, PERIODS)
     ax.grid(True, color="0.80", linewidth=0.6, alpha=0.8)
     ax.legend(loc="upper right")
