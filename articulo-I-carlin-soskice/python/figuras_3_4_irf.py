@@ -59,6 +59,8 @@ irf.to_csv(
     output_resultados / "irf_demanda_tres_regimenes.csv", index=False
 )
 
+line_styles = {"A": "-", "B": "--", "C": ":"}
+
 for variable, ylabel, title, filename in [
     ("x", r"Brecha del producto, $x_t$",
      r"IRF ante un shock de demanda $d_0=1$", "figura_3_irf_producto"),
@@ -73,16 +75,18 @@ for variable, ylabel, title, filename in [
         ax.plot(
             t,
             z[:, 0] if variable == "x" else z[:, 1],
+            color="black",
             linewidth=1.8,
+            linestyle=line_styles[case],
             label=fr"Caso {case}: $\eta={pars['eta']:.1f}$, $s={pars['s']:g}$",
         )
 
-    ax.axhline(0, linewidth=0.8)
+    ax.axhline(0, color="black", linewidth=0.8)
     ax.set_xlabel(r"Período, $t$")
     ax.set_ylabel(ylabel)
     ax.set_title(title)
     ax.set_xlim(0, PERIODS)
-    ax.grid(True, alpha=0.25)
+    ax.grid(True, color="0.80", linewidth=0.6, alpha=0.8)
     ax.legend(loc="upper right")
     fig.tight_layout()
 
