@@ -27,19 +27,24 @@ s_stab = 2.0 * (1.0 + a)
 s_T0 = 1.0 + a
 
 fig, ax = plt.subplots(figsize=(8.6, 6.6))
-cf = ax.contourf(E, S, rho, levels=np.linspace(0, 1.8, 19), vmin=0, vmax=1.8)
-ax.plot(eta, s_minus, linewidth=2, label=r"$Delta=0: s=(1-sqrt{a})^2$")
-ax.plot(eta, s_plus, linewidth=2, label=r"$Delta=0: s=(1+sqrt{a})^2$")
+cf = ax.contourf(
+    E, S, rho,
+    levels=np.linspace(0, 1.8, 19),
+    vmin=0,
+    vmax=1.8,
+)
+ax.plot(eta, s_minus, linewidth=2, label=r"$\Delta=0: s=(1-\sqrt{a})^2$")
+ax.plot(eta, s_plus, linewidth=2, label=r"$\Delta=0: s=(1+\sqrt{a})^2$")
 ax.plot(eta, s_stab, linewidth=2, label=r"Frontera de estabilidad")
 ax.plot(eta, s_T0, "--", linewidth=1.5, label=r"$T=0: s=1+a$")
 
 cbar = fig.colorbar(cf, ax=ax)
-cbar.set_label(r"Radio espectral $ho(A)$")
+cbar.set_label(r"Radio espectral $\rho(A)$")
 cbar.set_ticks(np.arange(0.0, 1.81, 0.2))
 
-ax.set_xlabel(r"Adaptación monetaria, $eta$")
-ax.set_ylabel(r"Intensidad monetaria, $s=kappagammaphi_pi$")
-ax.set_title(r"Radio espectral del sistema dinámico ($alpha=0.8$)")
+ax.set_xlabel(r"Adaptación monetaria, $\eta$")
+ax.set_ylabel(r"Intensidad monetaria, $s=\kappa\gamma\phi_\pi$")
+ax.set_title(r"Radio espectral del sistema dinámico ($\alpha=0.8$)")
 ax.set_xlim(0, 1)
 ax.set_ylim(0, 4)
 ax.grid(True, alpha=0.2)
