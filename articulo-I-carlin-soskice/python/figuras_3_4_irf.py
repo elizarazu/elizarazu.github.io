@@ -62,7 +62,7 @@ irf.to_csv(
 for variable, ylabel, title, filename in [
     ("x", r"Brecha del producto, $x_t$",
      r"IRF ante un shock de demanda $d_0=1$", "figura_3_irf_producto"),
-    ("pi", r"Desviación de inflación, $widetilde{pi}_t$",
+    ("pi", r"Desviación de inflación, $\widetilde{\pi}_t$",
      r"IRF de la inflación ante un shock de demanda $d_0=1$",
      "figura_4_irf_inflacion"),
 ]:
@@ -74,7 +74,7 @@ for variable, ylabel, title, filename in [
             t,
             z[:, 0] if variable == "x" else z[:, 1],
             linewidth=1.8,
-            label=fr"Caso {case}: $eta={pars['eta']:.1f}$, $s={pars['s']:g}$",
+            label=fr"Caso {case}: $\eta={pars['eta']:.1f}$, $s={pars['s']:g}$",
         )
 
     ax.axhline(0, linewidth=0.8)
