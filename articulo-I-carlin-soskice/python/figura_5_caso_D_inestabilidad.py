@@ -21,14 +21,14 @@ axes[0].axhline(0, linewidth=0.8)
 axes[0].set_ylabel(r"Brecha del producto, $x_t$")
 axes[0].set_title(
     r"Caso D: dinámica inestable "
-    r"($eta=0.50$, $s=3.00$, $ho(A)=%.4f$)" % ind["rho"]
+    r"($\eta=0.50$, $s=3.00$, $\rho(A)=%.4f$)" % ind["rho"]
 )
 axes[0].grid(True, alpha=0.25)
 
 axes[1].plot(t, z[:, 1], linewidth=1.8)
 axes[1].axhline(0, linewidth=0.8)
 axes[1].set_xlabel(r"Período, $t$")
-axes[1].set_ylabel(r"Desviación de inflación, $widetilde{pi}_t$")
+axes[1].set_ylabel(r"Desviación de inflación, $\widetilde{\pi}_t$")
 axes[1].grid(True, alpha=0.25)
 axes[1].set_xlim(0, PERIODS)
 
