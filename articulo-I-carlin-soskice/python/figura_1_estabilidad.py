@@ -43,7 +43,6 @@ ax.plot(eta, s_T0, color="black", linewidth=1.2,
 
 ax.set_xlabel(r"Adaptación monetaria, $\eta$")
 ax.set_ylabel(r"Intensidad monetaria, $s=\kappa\gamma\phi_\pi$")
-ax.set_title(r"Estabilidad y naturaleza de la dinámica ($\alpha=0.8$)")
 ax.set_xlim(0, 1)
 ax.set_ylim(0, 4)
 ax.grid(True, color="0.80", linewidth=0.6, alpha=0.8)
