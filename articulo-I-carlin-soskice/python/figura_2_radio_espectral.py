@@ -49,7 +49,6 @@ cbar.set_ticks(np.arange(0.0, 1.81, 0.2))
 
 ax.set_xlabel(r"Adaptación monetaria, $\eta$")
 ax.set_ylabel(r"Intensidad monetaria, $s=\kappa\gamma\phi_\pi$")
-ax.set_title(r"Radio espectral del sistema dinámico ($\alpha=0.8$)")
 ax.set_xlim(0, 1)
 ax.set_ylim(0, 4)
 ax.grid(True, color="0.80", linewidth=0.6, alpha=0.8)
