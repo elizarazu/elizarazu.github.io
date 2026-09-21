@@ -30,13 +30,18 @@ fig, ax = plt.subplots(figsize=(8.6, 6.6))
 cf = ax.contourf(
     E, S, rho,
     levels=np.linspace(0, 1.8, 19),
+    cmap="Greys",
     vmin=0,
     vmax=1.8,
 )
-ax.plot(eta, s_minus, linewidth=2, label=r"$\Delta=0: s=(1-\sqrt{a})^2$")
-ax.plot(eta, s_plus, linewidth=2, label=r"$\Delta=0: s=(1+\sqrt{a})^2$")
-ax.plot(eta, s_stab, linewidth=2, label=r"Frontera de estabilidad")
-ax.plot(eta, s_T0, "--", linewidth=1.5, label=r"$T=0: s=1+a$")
+ax.plot(eta, s_minus, color="black", linewidth=1.6,
+        linestyle="-", label=r"$\Delta=0: s=(1-\sqrt{a})^2$")
+ax.plot(eta, s_plus, color="black", linewidth=1.6,
+        linestyle="--", label=r"$\Delta=0: s=(1+\sqrt{a})^2$")
+ax.plot(eta, s_stab, color="black", linewidth=2.2,
+        linestyle="-.", label=r"Frontera de estabilidad")
+ax.plot(eta, s_T0, color="black", linewidth=1.2,
+        linestyle=":", label=r"$T=0: s=1+a$")
 
 cbar = fig.colorbar(cf, ax=ax)
 cbar.set_label(r"Radio espectral $\rho(A)$")
@@ -47,7 +52,7 @@ ax.set_ylabel(r"Intensidad monetaria, $s=\kappa\gamma\phi_\pi$")
 ax.set_title(r"Radio espectral del sistema dinámico ($\alpha=0.8$)")
 ax.set_xlim(0, 1)
 ax.set_ylim(0, 4)
-ax.grid(True, alpha=0.2)
+ax.grid(True, color="0.80", linewidth=0.6, alpha=0.8)
 ax.legend(loc="upper right", frameon=True)
 fig.tight_layout()
 
