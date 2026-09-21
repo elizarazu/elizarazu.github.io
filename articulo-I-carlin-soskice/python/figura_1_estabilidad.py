@@ -30,14 +30,14 @@ ax.contourf(
     alpha=0.16,
 )
 
-ax.plot(eta, s_minus, linewidth=2, label=r"$Delta=0: s=(1-sqrt{a})^2$")
-ax.plot(eta, s_plus, linewidth=2, label=r"$Delta=0: s=(1+sqrt{a})^2$")
+ax.plot(eta, s_minus, linewidth=2, label=r"$\Delta=0: s=(1-\sqrt{a})^2$")
+ax.plot(eta, s_plus, linewidth=2, label=r"$\Delta=0: s=(1+\sqrt{a})^2$")
 ax.plot(eta, s_stab, linewidth=2, label=r"Frontera de estabilidad")
 ax.plot(eta, s_T0, "--", linewidth=1.5, label=r"$T=0: s=1+a$")
 
-ax.set_xlabel(r"Adaptación monetaria, $eta$")
-ax.set_ylabel(r"Intensidad monetaria, $s=kappagammaphi_pi$")
-ax.set_title(r"Estabilidad y naturaleza de la dinámica ($alpha=0.8$)")
+ax.set_xlabel(r"Adaptación monetaria, $\eta$")
+ax.set_ylabel(r"Intensidad monetaria, $s=\kappa\gamma\phi_\pi$")
+ax.set_title(r"Estabilidad y naturaleza de la dinámica ($\alpha=0.8$)")
 ax.set_xlim(0, 1)
 ax.set_ylim(0, 4)
 ax.grid(True, alpha=0.25)
